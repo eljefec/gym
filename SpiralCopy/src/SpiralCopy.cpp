@@ -19,55 +19,45 @@ vector<int> spiralCopy( const vector<vector<int>>& inputMatrix )
   // inputMatrix[i] is row i.
   // inputMatrix[i][j] is column j in row i.
   
-  int rightEdge = inputMatrix[0].size() - 1;
-  int leftEdge = 0;
-  int topEdge = 0;
-  int bottomEdge = inputMatrix.size() - 1;
+  int rightCol = inputMatrix[0].size() - 1;
+  int leftCol = 0;
+  int topRow = 0;
+  int bottomRow = inputMatrix.size() - 1;
   
-  // rightEdge: 4, leftEdge: 0, topEdge: 0, bottomEdge: 3
-  // rightEdge: 4, leftEdge: 0, topEdge: 1, bottomEdge: 3
-  // rightEdge: 3, leftEdge: 0, topEdge: 1, bottomEdge: 3
-  // rightEdge: 3, leftEdge: 0, topEdge: 1, bottomEdge: 2
-  // rightEdge: 3, leftEdge: 1, topEdge: 1, bottomEdge: 2
-  // rightEdge: 3, leftEdge: 1, topEdge: 2, bottomEdge: 2
-  // rightEdge: 2, leftEdge: 1, topEdge: 2, bottomEdge: 2
-  // rightEdge: 2, leftEdge: 1, topEdge: 2, bottomEdge: 1
-  // Want to continue while topEdge <= bottomEdge && leftEdge <= rightEdge
-  
-  while (topEdge <= bottomEdge && leftEdge <= rightEdge)
+  while (topRow <= bottomRow && leftCol <= rightCol)
   {
-    for (int i = leftEdge; i <= rightEdge; i++)
+    for (int i = leftCol; i <= rightCol; i++)
     {
-      output.push_back(inputMatrix[topEdge][i]);
+      output.push_back(inputMatrix[topRow][i]);
     }
     
-    topEdge += 1;
+    topRow += 1;
     
-    for (int i = topEdge; i <= bottomEdge; i++)
+    for (int i = topRow; i <= bottomRow; i++)
     {
-      output.push_back(inputMatrix[i][rightEdge]);
+      output.push_back(inputMatrix[i][rightCol]);
     }
     
-    rightEdge -= 1;
+    rightCol -= 1;
     
-    if (topEdge > bottomEdge || leftEdge > rightEdge)
+    if (topRow > bottomRow || leftCol > rightCol)
     {
       return output;
     }
     
-    for (int i = rightEdge; i >= leftEdge; i--)
+    for (int i = rightCol; i >= leftCol; i--)
     {
-      output.push_back(inputMatrix[bottomEdge][i]);
+      output.push_back(inputMatrix[bottomRow][i]);
     }
     
-    bottomEdge -= 1;
+    bottomRow -= 1;
     
-    for (int i = bottomEdge; i >= topEdge; i--)
+    for (int i = bottomRow; i >= topRow; i--)
     {
-      output.push_back(inputMatrix[i][leftEdge]);
+      output.push_back(inputMatrix[i][leftCol]);
     }
     
-    leftEdge += 1;
+    leftCol += 1;
   }
   
   return output;
