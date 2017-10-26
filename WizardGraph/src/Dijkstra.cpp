@@ -37,11 +37,11 @@ void Flip(vector<int>& path)
     int start = 0;
     int end = path.size() - 1;
 
-    while (start > end)
+    while (start < end)
     {
         int tmp = path[start];
         path[start] = path[end];
-        path[end] = path[start];
+        path[end] = tmp;
 
         start++;
         end--;
@@ -115,16 +115,16 @@ vector<int> FindLowestCostPath(const vector<vector<int>>& graph)
 void TestDijkstra()
 {
     vector<vector<int>> g = {{1,2,3},
-                                {4,5,6},
-                                {7,8},
-                                {9},
-                                {6},
-                                {8,7},
-                                {9,4},
-                                {4,6},
-                                {1,},
-                                {1,4}
-                               };
+                             {4,5,6},
+                             {7,8},
+                             {9},
+                             {6},
+                             {8,7},
+                             {9,4},
+                             {4,6},
+                             {1,},
+                             {1,4}
+                            };
 
     vector<int> path = FindLowestCostPath(g);
     
@@ -132,5 +132,6 @@ void TestDijkstra()
     {
         cout << node << ' ';
     }
-}
 
+    cout << endl;
+}
