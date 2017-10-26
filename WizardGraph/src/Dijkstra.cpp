@@ -82,6 +82,8 @@ vector<int> FindLowestCostPath(const vector<vector<int>>& graph, int start, int 
     while (!Q.empty())
     {
         int u = GetNodeWithLeastDistance(Q, dist);
+
+        cout << "current: " << u << endl;
         
         if (u == goal)
         {

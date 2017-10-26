@@ -42,8 +42,6 @@ namespace AStar
         {
             auto it = f.find(node);
 
-            cout << "node: " << node << endl;
-
             assert(it != f.end());
 
             const int nodeF = (*it).second;
