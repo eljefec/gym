@@ -120,7 +120,7 @@ private:
     vector<vector<int>> prev_nodes;
 };
 
-Path FindLowestCostPath(const vector<vector<int>>& graph, int start, int goal)
+Path FindPath(const vector<vector<int>>& graph, int start, int goal)
 {
     Graph g(graph);
 
@@ -154,12 +154,12 @@ Path FindLowestCostPath(const vector<vector<int>>& graph, int start, int goal)
     }
 }
 
-Path FindLowestCostPath(const vector<vector<int>>& graph)
+Path FindPath(const vector<vector<int>>& graph)
 {
-    return FindLowestCostPath(graph, 0, graph.size() - 1);
+    return FindPath(graph, 0, graph.size() - 1);
 }
 
-int main()
+void TestBFS()
 {
     vector<vector<int>> g = {{1,2,3},
                                {4,5,6},
@@ -172,7 +172,6 @@ int main()
                                {1,},
                                {1,4}
                               };
-    Path p = FindLowestCostPath(g);
+    Path p = FindPath(g);
     cout << p << endl;
-    return 0;
 }
