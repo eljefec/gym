@@ -1,5 +1,5 @@
 #ifndef BFS_H
-#define BFs_H
+#define BFS_H
 
 void TestBFS();
 
