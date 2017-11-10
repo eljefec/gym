@@ -1,0 +1,116 @@
+0	• Unique: Implement an algorithm to determine if a string had all unique characters. What if you cannot use additional data structures?
+0	• Anagram: Given two strings, write a method to decide if one is a permutation of the other.
+0	• URLify: Write a method to replace all spaces in a string with "%20".
+0	• Given a string, write a function to check if it is a premutation of a palindrome. A palindrome is a string that is the same forwards and backwards.
+0	• One Edit Away: There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.
+0	• String Compression: Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3. If the compressed string would not be smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters (a-z)
+0	• Rotate Image: Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, wirte a method to rotate the image by 90 degrees. Can you do this in place?
+0	• Zero Matrix: Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
+0	• Rotation: Assume you have a method isSubstring which checks if one word is a substring of another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring (e.g., "waterbottle" is a rotation of "erbottlewat").
+1	• Remove dup: Write code to remove duplicates from an unsorted linked list.
+		? Follow up: How would you solve this problem if a temporary buffer is not allowed?
+1	• Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list.
+1	• Delete Middle Node: Implement an algorithm to delete a node in the middle (i.e., any node but the first and last node, not necessarily the exact middle) of a singly linked list, given only access to that node.
+		? Input: delete node c from a->b->c->d->e->f
+		? Result: linked list becomes a->b->d->e->f
+1	• Partition: Write code to partition a linked list around a value x, such that all nodes less than x come before all nodes greater than or equal to x. If x is contained within the list, the values of x only need to be after the elements less than x (see below). The partition element x can appear anywhere in the "right partition"; it does not need to appear between the left and right partitions.
+		? Input: [Partition=5] 3->5->8->5->10->2->1
+		? Output: 3->1->2->10->5->5->8
+1	• Sum lists: You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1's digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
+		? Example
+			§ Input: (7->1->6) + (5->9->2) (i.e., 617  + 295)
+			§ Output: 2->1->9 (i.e., 912).
+		? Follow up: The digits are stored in forward order.
+		? Example
+			§ Input: (6->1->7) + (2->9->5) (i.e., 617 + 295)
+			§ Output: 9->1->2 (i.e., 912)
+1	• Implement a function to check if a linked list is a palindrome.
+1	• Intersection: Given two (singly) linked lists, determine if the two lists intersect. Return the intersecting node. Note that the intersection is defined based on reference, not value. That is, if the kth node of the first linked list is the exact same node (by reference) as the jth node of the second linked list, then they are intersecting.
+1	• Loop Detection: Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop.
+		? Input: A->B->C->D->E->C (the same C as earlier)
+		? Output: C
+2	• Three in One: Describe how you could use a single array to implement three stacks.
+2	• Stack Min: How would you design a stack which, in addition to push and pop, has a function min which returns the minimum element? Push, pop, and min should all operate in O(1) time.
+2	• Stack of Plates
+2	• Queue via Stacks: Implement a MyQueue class which implements a queue using two stacks
+2	• Sort Stack: Write a program to sort a stack such that the smallest items are on the top. You can use an additional temporary stack, but you may not copy the elements into any other data structure (such as an array). The stack supports the following operations: push, pop, peek, and isEmpty.
+2	• Animal Shelter:
+2	• Given a list of intervals, merge the intervals that are next to each other
+		? Merge the full list
+		? Or, merge a stream of appointments
+3	• Sibling/Cousin to the Right (from Monica): Given a binary tree, add a Next field to each node that points to its sibling (or cousin) to the right.
+3	• Route Between Nodes: Given a directed graph, design an algorithm to find out whether there is a route between two nodes.
+3	• Minimal Tree: Given a sorted (increasing order) array with unique integer elements, write an algorithm to create a binary search tree with minimal height
+3	• List of Depths: Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth (e.g., if you have a tree with depth D, you'll have D linked lists)
+3	• Check Balanced: Implement a function to check if a binary tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that the heights of the two subtrees of any node never differ by more than once.
+3	• Validate BST: Implement a function to check if a binary tree is a binary search tree.
+3	• Successor: Write an algorithm to find the "next" node (i.e., in-order successor) of a given node in a binary search tree. You may assume that each node has a link to its parent.
+3	• Build Order: You are given a list of projects and a list of dependencies (which is a list of pairs of projects, where the second project is dependent on the first project). All of a project's dependencies must be built before the project is. Find a build order that will allow the project to be built. If there is no valid build order, return an error.
+		? Input:
+			§ Projects: a, b, c, d, e, f
+			§ Dependencies: (a, d), (f, b), (b, d), (f, a), (d, c)
+		? Output: f, e, a, b, d, c
+3	• First Common Ancestor: Design an algorithm and write code to find the first common ancestor of two nodes in a binary tree. Avoid storing additional nodes in a data structure. NOTE: This is not necessarily a binary search tree.
+3	• BST sequences: A binary search tree was created by traversing through an array from left to right and inserting each element. Given a binary search tree with distinct elements, print all possible arrays that could have led to this tree.
+3	• Check Subtree: T1 and T2 are two very large binary trees, with T1 much bigger than T2. Create an algorithm to determine if T2 is a subtree of T1.
+		? A tree T2 is a subtree of T1 if there exists a node n in T1 such that the subtree of n is identical to T2. That is, if you cut off the tree at node n, the two trees would be identical.
+3	• Random Node: You are implementing a binary tree class from scratch which, in addition to insert, find, and delete, has a method getRandomNode(), which returns a random node from the tree. All nodes should be equally likely to be chosen. Design and implement an algorithm for getRandomNode, and explain how you would implement the rest of the methods.
+3	• Paths with Sum: You are given a binary tree in which each node contains an integer value (which might be positive or negative). Design an algorithm to count the number of paths that sum to a given value. The path does not need to start or end at the root or a leaf, but it must go downwards (traveling only from parent nodes to child nodes).
+3	• BST In-order Successor: In a Binary Search Tree (BST), an Inorder Successor of a node is defined as the node with the smallest key greater than the key of the input node (see examples below). Given a node inputNode in a BST, you’re asked to write a function findInOrderSuccessor that returns the Inorder Successor of inputNode. If inputNode has no Inorder Successor, return null. Explain your solution and analyze its time and space complexities.
+3	• Social graph
+		? Given: GetFriends API
+		? Implement: get K recommended friends
+4	• Deck of Cards: Design the data structures for a generic deck of cards. Explain how you would subclass the data structures to implement blackjack.
+4	• Call Center
+4	• Jukebox
+4	• Parking Lot
+4	• Online Book Reader
+4	• Jigsaw
+		? Design data structure and explain an algo to solve the puzzle
+4	• Assume you have a fitsWith method
+4	• Chat Server
+4	• Othello
+4	• Circular Array
+4	• Minesweeper
+4	• File System
+4	• Hash Table
+5	• Design Pinterest
+		? Topic based discovery
+		? Storing individuals' boards
+		? Trending
+5	• Triple Step: Can either climb 1 step, 2 steps, or 3 steps at a time. Implement a method to count how many possible ways the child can run up the stairs.
+5	• Robot in a Grid: Can only move right and down, some cells are off limits. Find a path from top left to bottom right.
+5	• Magic Index. Where A[i] = i. Given a sorted array of distinct integers, find the magic index.
+5	• Power Set: Write a method to return all subsets of a set.
+5	• Recursive Multiply: Write a recursive function to multiply two positive integers without using the * operator. You can use addition, subtraction, and bit shifting, but you should minimize the number of those operations.
+5	• Towers of Hanoi
+5	• Permutations without Dups: Write a method to compute all permutations of a string of unique characters.
+5	• Permutations with Dups: Write a method to compute all permuations of a string whose characters are not necessarily unique. The list of permutations should not have duplicates.
+5	• Parens: Implement an algorithm to print all valid (e.g., properly o[pened and closed) combinations of n pairs of parentheses
+5	• Paint Fill
+5	• Coins: Given an infinite number of quarters, dimes, nickels, and pennies, write code to calculate the number of ways of representing n cents.
+5	• Eight Queens: Write an algorithm to print all ways of arranging eight queens on an 8x8 chess board so that none of them share the same row, column, or diagonal.
+5	• Stack of Boxes: You have a stack of n boxes, with widths wi, heights hi, and depths d(i). The boxes cannot be rotated and can only be stacked on top of one another if each box in the stack is strictly larger than the box above it in width, height, and depth. Implement a method to compute the height of the tallest possible stack. The height of a stack is the sum of the heights of each box.
+5	• Boolean Evaluation: Given a boolean expression consisting of the symbols 0 (false), 1 (true), & (AND), | (OR), and ^ (XOR), and a desired boolean result value, implement a function to count the number of ways of parenthesizing the expression such that it evaluates to result.
+6	• Stock Data: Called by up to 1000 client applications to get simple end-of-day stock price information (open, close, high, low). Assume you already have the data, and you can store it in any format you wish. 
+6	• Social Network: How would you design the data structures for a very large social network like FB or LinkedIn? How would you design an algorithm to show the shortest path between two people?
+6	• Web Crawler: If you were designing a web crawler, how would you avoid getting into infinite loops?
+6	• Duplicate URLs: You have 10 billion URLs. How do you detect the duplicate documents? In this case, assume "duplicate" means that the URLs are identical.
+6	• Cache: Web server for a simplified search engine. The system has 100 machines to respond to search queries, which may then call out using processSearch(string query) to another cluster of machines to actually get the result. The machine which responds to a given query is chosen at random, so you cannot guarantee that the same machine will always respond to the same request. The method processSearch is very expensive. Design a caching mechanism for the most recent queries. Be sure to explain how you would update the cache when data changes.
+6	• Sales Rank: A large ecommerce company wishes to list the best-selling products, overall and by category. For example, one product might be the 1056th best-selling product overall but the 13th best-selling product under "Sports Equipment" and the 24th best-selling product under "Safety". Describe how you would design this system.
+6	• Personal Financial Manager: Explain how you would design a personal financial manager (like mint.com). This system would connect to your bank accounts, analyze your spending habits, and make recommendations.
+6	• Pastebin: Design a system like Pastebin, where a user can enter a piece of text and get a randomly generated URL to access it.
+7	• Sorted Merge: You are given two sorted arrays, A and B, where A has a large enough buffer at the end to hold B. Write a method to merge B into A in sorted order.
+7	• Group Anagrams: Write a method to sort an array of strings so that all the anagrams are next to each other.
+7	• Search in Rotated Array: Given a sorted array of n integers that has been rotated an unknown number of times, write code to find an element in the array. You may assume that the array was originally sorted in increasing order.
+7	• Sorted Search, No Size: You are given an array-like data structure Listy which lacks a size method. It does, however, have an elementAt(i) method that returns the element at index I in O(1) time. If I is beyond the bounds of the data structure, it returns -1. (For this reason, the data structure only supported positive integers.) Given a Listy which contains sorted, positive integers, find the index at which an element x occurs. If x occurs multiple times, you may return any index.
+7	• Sparse Search: Given a sorted array of strings that is interspersed with empty strings, write a method to find the location of a given string.
+7	• Sort Big File: Imagine you have a 20 GB file with one string per line. Explain how you would sort the file.
+7	• Missing Int: Given an input file with four billion non-negative integers, provide an algorithm to generate an integer that is not contained in the file. Assume you have 1 GB of memory available for this task.
+		? What if you have only 10 MB of memory? Assume that all the values are distinct and we now have no more than one billion non-negative integers.
+7	• Find Duplicates: You have an array with all the numbers from 1 to N, where N is at most 32,000. The array may have duplicate entries and you do not know what N is. With only 4 kilobytes of memory available, how would you print all duplicate elements in the array.
+7	• Sorted Matrix Search: Given an M x N matrix in which each row and each column is sorted in ascending order, write a method to find an element.
+7	• Rank from Stream: Imagine you are reading in a stream of integers. Periodically, you wish to be able to look up th erank of a number x (the number of values less than or equal to x). Implement the data structures and algorithms to support these operations. That is, implement the method track(int x), which is called when each number is generated, and the method getRankOfNumber(int x), which returns the number of values less than or equal to x (not including x itself).
+7	• Peaks and Valleys: In an array of integers, a "peak" is an element which is greater than or equal to the adjacent integers and a "valley" is an element which is less than or equal to the adjacent integers. For example, in the array [5,8,6,2,3,4,6], [8,6] are peaks and [5,2] are valleys. Given an array of integers, sort the array into an alternating sequence of peaks and valleys.
+10	• Given a file system with multiple folders and files, return files that have the same contents.
+10	• Given a file and a sequence of bytes, write a function returning true/false to determine if the sequence of bytes are present in the file.
