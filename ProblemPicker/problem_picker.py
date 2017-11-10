@@ -5,6 +5,9 @@ class Problem:
 		self.category = category
 		self.description = description
 
+	def __repr__(self):
+		return str(self.category) + ',' + self.description
+
 class ProblemPicker:
 	def __init__(self, problem_file):
 		self.problems = []
@@ -25,4 +28,7 @@ class ProblemPicker:
 if __name__ == '__main__':
 	picker = ProblemPicker('problems.txt')
 	p = picker.pick_problem()
-	print(p.description)
+	print()
+	if p.category == '4':
+		print('Category: System Design')
+	print('Description: ', p.description)
