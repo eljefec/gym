@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "DB.h"
 
 void DB::Set(const std::string & name, const std::string & value)
