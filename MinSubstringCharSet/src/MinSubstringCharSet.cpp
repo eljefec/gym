@@ -30,6 +30,26 @@ public:
     {
     }
 
+    string find()
+    {
+        while (tryExpandWindowToSatisfyCharset())
+        {
+            shrinkWindowWhileSatisfyingCharset();
+            updateMin();
+            shrinkWindowToNextCharInSet();
+        }
+
+        if (!m_hasMin)
+        {
+            return "";
+        }
+        else
+        {
+            return m_input.substr(m_min.leftInclusive, m_min.rightExclusive - m_min.leftInclusive);
+        }
+    }
+
+private:
     bool windowSatisfiesCharset() const
     {
         for (const char c : m_charset)
@@ -127,25 +147,6 @@ public:
         }
     }
 
-    string find()
-    {
-        while (tryExpandWindowToSatisfyCharset())
-        {
-            shrinkWindowWhileSatisfyingCharset();
-            updateMin();
-            shrinkWindowToNextCharInSet();
-        }
-
-        if (!m_hasMin)
-        {
-            return "";
-        }
-        else
-        {
-            return m_input.substr(m_min.leftInclusive, m_min.rightExclusive - m_min.leftInclusive);
-        }
-    }
-
     const string& m_input;
     const unordered_set<char>& m_charset;
 
@@ -194,6 +195,7 @@ struct TestCase
 int main() 
 {
   vector<TestCase> cases = {{"asdf", "a", "a"},
+                            {"asdf", "", ""},
                             {"asdf", "ad", "asd"},
                             {"babble", "al", "abbl"},
                             {"babble", "la", "abbl"},
