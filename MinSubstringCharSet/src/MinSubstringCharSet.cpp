@@ -51,7 +51,7 @@ public:
             return false;
         }
 
-        while (!windowSatisfiesCharset() && m_window.rightExclusive < m_input.size())
+        while (m_window.rightExclusive < m_input.size())
         {
             m_window.rightExclusive++;
 
@@ -60,10 +60,15 @@ public:
             if (m_charset.count(c))
             {
                 m_charfreq[c]++;
+
+                if (windowSatisfiesCharset())
+                {
+                    return true;
+                }
             }
         }
 
-        return windowSatisfiesCharset();
+        return false;
     }
 
     void shrinkWindowWhileSatisfyingCharset()
